@@ -1,0 +1,177 @@
+[
+    {
+        "id": "sd_ibtuW55fZ7g3lQ5K",
+        "type": "tab",
+        "createdDate": "2022-04-25T09:47:42.068Z",
+        "label": "list",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "listComponent"
+    },
+    {
+        "id": "sd_KTKVRpJMOis7YuVq",
+        "type": "OnInit",
+        "z": "sd_ibtuW55fZ7g3lQ5K",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_KTKVRpJMOis7YuVq",
+        "category": "Lifecycle Events",
+        "x": 30,
+        "y": 30,
+        "wires": [
+            [
+                "sd_4iCIgsy5KEAYjW6i"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "listComponent"
+    },
+    {
+        "id": "sd_4iCIgsy5KEAYjW6i",
+        "type": "PageVariables",
+        "z": "sd_ibtuW55fZ7g3lQ5K",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "blogs",
+                "typedIpValue": {
+                    "type": "bh",
+                    "value": ""
+                }
+            }
+        ],
+        "functionName": "sd_4iCIgsy5KEAYjW6i",
+        "category": "Function",
+        "x": 180,
+        "y": 30,
+        "wires": [
+            [
+                "sd_2q4Bs1V3E5jpiG61"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_2q4Bs1V3E5jpiG61",
+        "type": "Script",
+        "z": "sd_ibtuW55fZ7g3lQ5K",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.blogs = [\n    {\n        \"id\" : 1,\n        \"title\" : \"Blog One\",\n        \"description\" : \"Helloo, I am Blog 1\",\n        \"src\" : \"https://media.istockphoto.com/vectors/abstract-business-arrow-up-logo-icon-vector-design-template-vector-id1140553971?k=20&m=1140553971&s=612x612&w=0&h=7-a1JjWAf8c5qKF46FRgdFg-3jva9qo80hqh0z_Y34A=\"\n    },\n    {\n        \"id\" : 2,\n        \"title\" : \"Blog Two\",\n        \"description\" : \"Helloo, I am Blog 2\",\n        \"src\" : \"https://us.123rf.com/450wm/andyadi/andyadi1802/andyadi180200513/95572662-vector-logo-design-for-beauty-salon-dermatology-center-and-wellness-house-.jpg?ver=6\"\n    },\n    {\n        \"id\" : 3,\n        \"title\" : \"Blog Three\",\n        \"description\" : \"Helloo, I am Blog 3\",\n        \"src\" : \"https://image.shutterstock.com/image-vector/eye-vision-logo-design-icon-260nw-1656429649.jpg\"\n    }\n]",
+        "functionName": "sd_2q4Bs1V3E5jpiG61",
+        "category": "Function",
+        "x": 345,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_8RLG5r5tsDvdT9wB",
+        "type": "PageStart",
+        "z": "sd_ibtuW55fZ7g3lQ5K",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "Navigate to detail page",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "event",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "navigateToDetailPage",
+        "category": "General",
+        "x": 100,
+        "y": 160,
+        "wires": [
+            [
+                "sd_Epi05h6pB9UZdNt3"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "listComponent"
+    },
+    {
+        "id": "sd_AiVyvhf98G6v0ygY",
+        "type": "Navigation",
+        "z": "sd_ibtuW55fZ7g3lQ5K",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/home/detail/:id",
+        "pathparams": [
+            {
+                "paramKey": "id",
+                "paramValue": {
+                    "type": "bh.input",
+                    "value": "event.id"
+                }
+            }
+        ],
+        "functionName": "sd_AiVyvhf98G6v0ygY",
+        "category": "Navigation",
+        "x": 385,
+        "y": 160,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_Epi05h6pB9UZdNt3",
+        "type": "Storage",
+        "z": "sd_ibtuW55fZ7g3lQ5K",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "Session Storage",
+        "operationType": "setItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "selectedBlog"
+        },
+        "value": {
+            "type": "bh.input",
+            "value": "event"
+        },
+        "resultMapping": {},
+        "functionName": "sessionStorage",
+        "category": "Storage",
+        "x": 240,
+        "y": 180,
+        "wires": [
+            [
+                "sd_AiVyvhf98G6v0ygY"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    }
+]

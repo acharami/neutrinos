@@ -1,0 +1,101 @@
+[
+    {
+        "id": "sd_chJauIrwIolDaEdc",
+        "type": "tab",
+        "createdDate": "2022-04-25T07:45:43.998Z",
+        "label": "home",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "homeComponent"
+    },
+    {
+        "id": "sd_UDxnTa2XBmx77nUz",
+        "type": "OnInit",
+        "z": "sd_chJauIrwIolDaEdc",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "inputVariables": [],
+        "localVariables": [],
+        "outputVariables": [],
+        "functionName": "sd_UDxnTa2XBmx77nUz",
+        "category": "Lifecycle Events",
+        "x": 30,
+        "y": 30,
+        "wires": [
+            [
+                "sd_BHdAYsDUYzkYuHE5"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "homeComponent"
+    },
+    {
+        "id": "sd_BHdAYsDUYzkYuHE5",
+        "type": "PageVariables",
+        "z": "sd_chJauIrwIolDaEdc",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [],
+        "functionName": "sd_BHdAYsDUYzkYuHE5",
+        "category": "Function",
+        "x": 180,
+        "y": 30,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_kcFtolS7elELuZH6",
+        "type": "PageStart",
+        "z": "sd_chJauIrwIolDaEdc",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "openAlert",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "openAlert",
+        "category": "General",
+        "x": 120,
+        "y": 140,
+        "wires": [
+            [
+                "sd_ej5exs4KyiX1XOwP"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "homeComponent"
+    },
+    {
+        "id": "sd_ej5exs4KyiX1XOwP",
+        "type": "Script",
+        "z": "sd_chJauIrwIolDaEdc",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "show alert box",
+        "script": "alert(\"Hello Ami!\");",
+        "functionName": "showAlertBox",
+        "category": "Function",
+        "x": 265,
+        "y": 140,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    }
+]
